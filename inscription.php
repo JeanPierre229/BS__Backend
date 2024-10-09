@@ -61,9 +61,15 @@
             <div class="col-6 shadow bg-light py-3 px-4 inside margin-5 ms-5">
                 <h4 class="text-center">Inscrivez-vous !</h4>
                 <form action="#" class="form" method="post">
-                    <div class="mb-3">
-                        <label for="nom_complet" class="form-label h5">Nom Complet: </label>
-                        <input type="text" class="form-control" id="nom_complet" name="nom_complet" placeholder="Nom Complet" required>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="nom_complet" class="form-label h5">Nom: </label>
+                            <input type="text" class="form-control" id="nom_complet" name="nom_complet" placeholder="Nom..." required>
+                        </div>
+                        <div class="col">
+                            <label for="prenom" class="form-label h5">Prénom: </label>
+                            <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom..." required>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="nom_complet" class="form-label h5">Catégories: </label>

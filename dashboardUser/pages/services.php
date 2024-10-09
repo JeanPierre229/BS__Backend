@@ -78,7 +78,7 @@
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html " target="_blank">
+      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.php " target="_blank">
         <img src="../../img/img-peulh/bovinsolution.png" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold text-green">Bovin<span class="text-orange">Solution</span></span>
       </a>
@@ -87,7 +87,7 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../pages/dashboard.html">
+          <a class="nav-link" href="../pages/dashboard.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>shop </title>
@@ -107,7 +107,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  active" href="../pages/services.html">
+          <a class="nav-link  active" href="../pages/services.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -127,7 +127,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/profile.html">
+          <a class="nav-link  " href="../pages/profile.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>customer-support</title>
@@ -587,7 +587,7 @@
               <div class="card-header pb-0">
                 <h6 class="font-weight-bolder">Potentiels Acheteurs</h6>
                 <p class="font-weight-bold mb-3">
-                  <a href="chat.html">
+                  <a href="chat.php">
                     <i class="fas fa-comments"></i> Discussions avec les acheteurs
                   </a>
                 </p>
@@ -628,7 +628,7 @@
                           <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                         </td>
                         <td class="align-middle">
-                          <a href="chat.html" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
+                          <a href="chat.php" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
                             Envoyer un Message
                           </a>
                         </td>
@@ -656,7 +656,7 @@
                           <span class="text-secondary text-xs font-weight-bold">11/01/19</span>
                         </td>
                         <td class="align-middle">
-                          <a href="chat.html" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
+                          <a href="chat.php" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
                             Envoyer un Message
                           </a>
                         </td>
@@ -684,7 +684,7 @@
                           <span class="text-secondary text-xs font-weight-bold">19/09/17</span>
                         </td>
                         <td class="align-middle">
-                          <a href="chat.html" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
+                          <a href="chat.php" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
                             Envoyer un Message
                           </a>
                         </td>
@@ -712,7 +712,7 @@
                           <span class="text-secondary text-xs font-weight-bold">24/12/08</span>
                         </td>
                         <td class="align-middle">
-                          <a href="chat.html" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
+                          <a href="chat.php" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
                             Envoyer un Message
                           </a>
                         </td>
@@ -740,7 +740,7 @@
                           <span class="text-secondary text-xs font-weight-bold">04/10/21</span>
                         </td>
                         <td class="align-middle">
-                          <a href="chat.html" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
+                          <a href="chat.php" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
                             Envoyer un Message
                           </a>
                         </td>
@@ -768,7 +768,7 @@
                           <span class="text-secondary text-xs font-weight-bold">14/09/20</span>
                         </td>
                         <td class="align-middle">
-                          <a href="chat.html" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
+                          <a href="chat.php" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Envoyer un Message Utilisateur" title="Envoyez un message à cet acheteur">
                             Envoyer un Message
                           </a>
                         </td>
@@ -1055,7 +1055,7 @@
                   <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
                     <div class="card h-100 card-plain border">
                       <div class="card-body d-flex flex-column justify-content-center text-center">
-                        <a href="pop-up-nouveau-bovin.html">
+                        <a href="pop-up-nouveau-bovin.php">
                           <i class="fa fa-plus text-secondary mb-3"></i>
                           <h5 class=" text-secondary"> Nouvel Animal </h5>
                         </a>
@@ -1151,7 +1151,7 @@
                           <span class="badge badge-sm bg-gradient-secondary">En vente</span>
                         </td>
                         <td class="align-middle text-center text-sm">
-                          <a href="pop-up-edit-bovin.html">
+                          <a href="pop-up-edit-bovin.php">
                             <i class="fa fa-pencil pe-4" title="Editer"></i>
                           </a>
                           <a href="javascript:;">
@@ -1223,7 +1223,7 @@
                           <span class="badge badge-sm bg-gradient-secondary">En Vente</span>
                         </td>
                         <td class="align-middle text-center text-sm">
-                          <a href="pop-up-edit-bovin.html">
+                          <a href="pop-up-edit-bovin.php">
                             <i class="fa fa-pencil pe-4" title="Editer"></i>
                           </a>
                           <a href="javascript:;">
@@ -1394,7 +1394,7 @@
       selectTanimaux.click();
     }
     function clickBovin(){
-      location.href = "pop-up-bovin-en-vente.html";
+      location.href = "pop-up-bovin-en-vente.php";
     }
 
     function showSection_t(section) {

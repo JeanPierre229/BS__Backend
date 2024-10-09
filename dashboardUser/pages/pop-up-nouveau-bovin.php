@@ -110,7 +110,7 @@
                             <button class="btn bg-gradient-success">Ajouter</button>
                         </div>
                         <div class="col mt-3 text-end">
-                            <a href="services.html" class="btn btn-gradient-warning">Annuler</a>
+                            <a href="services.php" class="btn btn-gradient-warning">Annuler</a>
                         </div>
                     </div>
                 </div>

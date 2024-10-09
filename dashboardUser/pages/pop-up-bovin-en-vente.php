@@ -73,46 +73,33 @@
 <body class="g-sidenav-show bg-gray-100">
 
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
-    <div class="container-fluid px-3">
+    <div class="container-fluid">
       <!-- Pop-up avec flou en arrière-plan -->
       <div class="pop-up-overlay">
         <div class="pop-up-content">
           <div class="card">
             <div class="card-header text-start">
-              <h5 class="card-title mb-0 text-center mb-2">Modifier ce bovin</h5>
+              <h5 class="card-title mb-0 text-center mb-2">Mettre Ce Bovin en Vente💰💲</h5>
               <form action="#" method="post">
-                <div class="mb-3">
-                  <label for="nom" class="form-label">Categorie du Bovin:</label>
-                  <select class="form-select" id="nom" name="nom" required>
-                    <option value="vaux">Vaux</option>
-                    <option value="taureau" selected>Taureau</option>
-                    <option value="vache">Vache</option>
-                  </select>
+                <p class="text-center">
+                    <img src="../../img/img-peulh/Animaux Enregistres/animaux-03.jpeg" class="rounded-3 mt-3" style="width: 400px; height: 200px;" alt="image_animaux">
+                </p>
+                <div class="text-center">
+                    <span class="font-weight-bolder"> Vaux </span>
                 </div>
-                <div class="mb-3">
-                  <label for="imageBovin" class="form-label">Image du bovin:</label>
-                  <input type="file" class="form-control" id="imageBovin" name="imageBovin" required>
-                </div>
-                <div class="mb-3">
-                  <label for="sexe" class="form-label">Sexe:</label>
-                  <select class="form-select" id="sexe" name="sexe" required>
-                    <option value="male">Mâle</option>
-                    <option value="femele" selected>Femele</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                    <label for="descriptionBovin" class="form-label">Prix du bovin: </label>
-                    <input type="number" class="form-control" min="100000" value="1200000" step="100000" id="price" placeholder="Prix du bovin" required>
-                </div>
-                <div class="">
-                    <div class="row">
-                        <div class="col mt-3">
-                            <button class="btn bg-gradient-success">Modifier</button>
-                        </div>
-                        <div class="col mt-3 text-end">
-                            <a href="services.html" class="btn btn-gradient-warning">Annuler</a>
-                        </div>
-                    </div>
+                <p>
+                    Un vaux de 2ans qui est bien nouris et bien dodu.
+                </p>
+                <div class="row justify-content-center">
+                  <div class="col-5">
+                    <input type="number" class="form-control" min="100000" step="100000" id="price" placeholder="Prix du bovin" required>
+                  </div>
+                  <div class="col text-center">
+                    <button class="btn bg-gradient-success">Vendre</button>
+                  </div>
+                  <div class="col">
+                    <a href="services.php" class="btn btn-outline-dark">Annuler</a>
+                  </div>
                 </div>
               </form>
             </div>
