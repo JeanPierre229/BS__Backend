@@ -144,7 +144,7 @@
                     <h1 class="section-title mb-3">Rencontrez nos experts de l'élevage</h1>
                 </div>
                 <div class="col-lg-6">
-                    <h4 class="font-weight-normal text-muted mb-3">Notre équipe est composée de passionnés de l'élevage bovin et de professionnels de la technologie prêt à faciliter la vie des éleveurs.</h4>
+                    <h4 class="font-weight-normal text-muted mb-3">Notre équipe est composée de passionnés d'élevage bovin et de professionnels de la technologie prêt à faciliter la vie des éleveurs.</h4>
                 </div>
             </div>
             <div class="row">

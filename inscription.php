@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,39 +60,49 @@
                 </div>
             </div>
             <div class="col-6 shadow bg-light py-3 px-4 inside margin-5 ms-5">
-                <h4 class="text-center">Inscrivez-vous !</h4>
-                <form action="#" class="form" method="post">
+                <h4 class="text-center mb-3">Inscrivez-vous !</h4>
+                <form action="traitementInscription.php" class="form" method="post">
                     <div class="row mb-3">
                         <div class="col">
-                            <label for="nom_complet" class="form-label h5">Nom: </label>
-                            <input type="text" class="form-control" id="nom_complet" name="nom_complet" placeholder="Nom..." required>
+                            <label for="nom" class="form-label h5">Nom: </label>
+                            <input type="text" class="form-control" id="nom" value="<?php if(isset($_SESSION['nom'])): ?><?php echo $_SESSION['nom']; unset($_SESSION['nom']); ?><?php endif ?>" name="nom" placeholder="Nom..." required>
                         </div>
                         <div class="col">
                             <label for="prenom" class="form-label h5">Prénom: </label>
-                            <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom..." required>
+                            <input type="text" class="form-control" id="prenoms" value="<?php if(isset($_SESSION['prenoms'])): ?><?php echo $_SESSION['prenoms']; unset($_SESSION['prenoms']); ?><?php endif ?>" name="prenoms" placeholder="Prénom..." required>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="nom_complet" class="form-label h5">Catégories: </label>
-                        <select name="" id="" class="form-control">
-                            <option value="Eleveurs">Eleveurs</option>
-                            <option value="Particuliers">Particuliers</option>
-                            <option value="Consommateurs">Consommateurs</option>
+                        <label for="categories" class="form-label h5">Catégories: </label>
+                        <select name="categories" id="categories" class="form-control">
+                            <option <?php if(isset($_SESSION['categories']) && $_SESSION['categories'] == "Eleveurs"){ ?> selected="selected"<?php unset($_SESSION['categories']); } ?> value="Eleveurs">Eleveurs</option>
+                            <option <?php if(isset($_SESSION['categories']) && $_SESSION['categories'] == "Particuliers"){ ?> selected="selected"<?php unset($_SESSION['categories']); } ?> value="Particuliers">Particuliers</option>
+                            <option <?php if(isset($_SESSION['categories']) && $_SESSION['categories'] == "Consommateurs"){ ?> selected="selected"<?php unset($_SESSION['categories']); } ?> value="Consommateurs">Consommateurs</option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="mail" class="form-label h5">E-mail: </label>
-                        <input type="text" class="form-control" id="mail" name="mail" placeholder="E-mail" required>
+                        <input type="email" class="form-control" id="mail" name="mail" value="<?php if(isset($_SESSION['mail'])): ?><?php echo $_SESSION['mail']; unset($_SESSION['mail']); ?><?php endif ?>" placeholder="E-mail" required>
+                        <?php if(isset($_SESSION['error_mail'])): ?>
+                            <p class="text-danger p-0 m-0">
+                                <?php echo $_SESSION['error_mail']; unset($_SESSION['error_mail']) ?>
+                            </p>
+                        <?php endif; ?>
                     </div>
                     <div class="mb-3">
                         <label for="motDePasse" class="form-label h5">Mot de passe: </label>
                         <input type="password" class="form-control" id="motDePasse" name="motDePasse" placeholder="Mot de Passe" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="">
                         <label for="cmotDePasse" class="form-label h5">Confirmez le mot de passe: </label>
                         <input type="password" class="form-control" id="cmotDePasse" name="cmotDePasse" placeholder="Confirmez le mot de passe" required>
                     </div>
-                    <div>
+                    <?php if(isset($_SESSION['error_mp'])): ?>
+                        <p class="text-danger p-0 m-0">
+                            <?php echo $_SESSION['error_mp']; unset($_SESSION['error_mp']) ?>
+                        </p>
+                    <?php endif; ?>
+                    <div class='mt-4'>
                         <input type="submit" class="form-control btn-secondary-new p-3" style="font-weight: bold;" value="Connexion">
                     </div>
                     <div class="mt-3">

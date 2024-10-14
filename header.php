@@ -51,9 +51,9 @@
                         <div class="nav-item dropdown">
                             <a href="service.php" class="nav-link dropdown-toggle" data-toggle="dropdown">Solution</a>
                             <div class="dropdown-menu rounded-0 m-0">
+                                <a href="service.php" class="dropdown-item">Trouver un animalier</a>
                                 <a href="service.php" class="dropdown-item">Marchés de bétail</a>
                                 <a href="service.php" class="dropdown-item">Géolocalisation des sites de pâturage</a>
-                                <a href="service.php" class="dropdown-item">Recherche d'animaliers et de dignitaires peulhs</a>
                                 <a href="service.php" class="dropdown-item">Achat de produits d'élevage</a>
                                 <a href="service.php" class="dropdown-item">Gestion de votre cheptel</a>
                             </div>

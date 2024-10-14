@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,7 +61,12 @@
             </div>
             <div class="col-6 shadow bg-light p-5 inside margin-5 ms-5">
                 <h4 class="text-center">Connectez-vous !</h4>
-                <form action="#" class="form" method="post">
+                <form action="traitementConnexion.php" class="form" method="post">
+                    <?php if(isset($_SESSION['error_connect'])): ?>
+                        <p class="alert alert-danger">
+                            <?php echo $_SESSION['error_connect']; unset($_SESSION['error_connect']);?>
+                        </p>
+                    <?php endif;?>
                     <div class="mb-3">
                         <label for="mail" class="form-label h5">E-mail: </label>
                         <input type="text" class="form-control" id="mail" name="mail" placeholder="E-mail" required>
