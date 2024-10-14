@@ -19,9 +19,10 @@ if(!empty($_POST) && isset($_POST)){
             ':motDePasse' => $motDePasse
         ]);
         if($requete->rowCount() > 0) {
-            $_SESSION['nom'] = $requete->fetch()['nom'];
-            $_SESSION['prenoms'] = $requete->fetch()['prenoms'];
-            $_SESSION['categories'] = $requete->fetch()['categories'];
+            $resultat = $requete->fetch();
+            $_SESSION['nom'] = $resultat['nom'];
+            $_SESSION['prenoms'] = $resultat['prenoms'];
+            $_SESSION['categories'] = $resultat['categories'];
             header("Location: dashboardUser/pages/dashboard.php");
         }else{
             $_SESSION['error_connect'] = "Erreur, Identifiants incorrects !";
