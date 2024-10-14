@@ -73,6 +73,6 @@
       </ul>
     </div>
     <div class="sidenav-footer mx-3 ">
-      <a class="btn bg-gradient-primary mt-3 w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard-pro?ref=sidebarfree">Version Premium</a>
+      <a class="btn bg-gradient-primary mt-3 w-100" href="deconnexion.php">Version Premium</a>
     </div>
   </aside>
