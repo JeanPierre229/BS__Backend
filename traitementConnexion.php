@@ -23,7 +23,7 @@ if(!empty($_POST) && isset($_POST)){
             $_SESSION['nom'] = $resultat['nom'];
             $_SESSION['prenoms'] = $resultat['prenoms'];
             $_SESSION['categories'] = $resultat['categories'];
-            header("Location: dashboardUser/pages/dashboard.php");
+            header("Location: index.php");
         }else{
             $_SESSION['error_connect'] = "Erreur, Identifiants incorrects !";
             header("Location: connexion.php");
