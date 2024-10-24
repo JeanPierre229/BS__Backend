@@ -80,7 +80,7 @@
 
 <body class="g-sidenav-show  bg-gray-100">
   <?php require "aside.php" ?>
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
     <!-- Navbar -->
     <?php require "navbar.php"; ?>
     <!-- End Navbar -->

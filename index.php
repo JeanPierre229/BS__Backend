@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    $element_active = "index";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +28,15 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Materials icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+<style>
+    .h-edit{
+        height: 100px;
+    }
+</style>
 
 <body>
     <!-- Header Start -->
@@ -46,7 +58,11 @@
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="p-5" style="width: 100%; max-width: 900px;">
                             <h1 class="display-3 text-white mb-md-4">Trouvez l'animalier peulh fiable et compétent.</h1>
-                            <a href="inscription.php" class="btn btn-primary">Commencer</a>
+                            <?php if(empty($_SESSION)){ ?>
+                                <a href="inscription.php" class="btn btn-primary">Commencer</a>
+                            <?php }else{ ?>
+                                <a href="service.php" class="btn btn-primary">Trouver le Service</a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -55,7 +71,11 @@
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="p-5" style="width: 100%; max-width: 900px;">
                             <h1 class="display-3 text-white mb-md-4">Ayez votre cheptel sans posséder de ferme.</h1>
-                            <a href="inscription.php" class="btn btn-primary">Commencer</a>
+                            <?php if(empty($_SESSION)){ ?>
+                                <a href="inscription.php" class="btn btn-primary">Commencer</a>
+                            <?php }else{ ?>
+                                <a href="service.php" class="btn btn-primary">Trouver le Service</a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -64,7 +84,11 @@
                     <div class="carousel-caption d-flex align-items-center justify-content-center">
                         <div class="p-5" style="width: 100%; max-width: 900px;">
                             <h1 class="display-3 text-white mb-md-4">Achetez des produits bovins où que vous soyez.</h1>
-                            <a href="inscription.php" class="btn btn-primary">Commencer</a>
+                            <?php if(empty($_SESSION)){ ?>
+                                <a href="inscription.php" class="btn btn-primary">Commencer</a>
+                            <?php }else{ ?>
+                                <a href="service.php" class="btn btn-primary">Trouver le Service</a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -260,11 +284,11 @@
             <div class="row m-0 portfolio-container">
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                     <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img">
-                            <img class="img-fluid w-100" src="img/img-peulh/portfolio-1.jpg" alt="">
+                        <div class="portfolio-img h-edit">
+                            <img class="img-fluid w-100" src="img/img-peulh/portfolio/abreuvage.jpeg" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Nom du projet</h4>
+                            <h4 class="font-weight-bold mb-4">Abreuvage</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-sm btn-secondary m-1" href="">
                                     <i class="fa fa-link"></i>
@@ -278,11 +302,11 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                     <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img">
-                            <img class="img-fluid w-100" src="img/img-peulh/portfolio-2.jpg" alt="">
+                        <div class="portfolio-img h-edit">
+                            <img class="img-fluid w-100" src="img/img-peulh/portfolio/extraction de lait.jpg" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Nom du projet</h4>
+                            <h4 class="font-weight-bold mb-4">Lait Concentré</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-sm btn-secondary m-1" href="">
                                     <i class="fa fa-link"></i>
@@ -296,11 +320,11 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                     <div class="position-relative overflow-hidden">
-                        <div class="portfolio-img">
-                            <img class="img-fluid w-100" src="img/img-peulh/portfolio-3.jpg" alt="">
+                        <div class="portfolio-img h-edit">
+                            <img class="img-fluid w-100" src="img/img-peulh/portfolio/foin pour bovin.jpeg" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Nom du projet</h4>
+                            <h4 class="font-weight-bold mb-4">Foin</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-sm btn-secondary m-1" href="">
                                     <i class="fa fa-link"></i>
@@ -315,10 +339,10 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img">
-                            <img class="img-fluid w-100" src="img/img-peulh/portfolio-4.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/img-peulh/portfolio/fromage rouge pour bovin.png" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Nom du projet</h4>
+                            <h4 class="font-weight-bold mb-4">Fromage Rouge</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-sm btn-secondary m-1" href="">
                                     <i class="fa fa-link"></i>
@@ -333,10 +357,10 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img">
-                            <img class="img-fluid w-100" src="img/img-peulh/portfolio-5.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/img-peulh/portfolio/meat.png" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Nom du projet</h4>
+                            <h4 class="font-weight-bold mb-4">Viande Saillant</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-sm btn-secondary m-1" href="">
                                     <i class="fa fa-link"></i>
@@ -351,10 +375,10 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item">
                     <div class="position-relative overflow-hidden">
                         <div class="portfolio-img">
-                            <img class="img-fluid w-100" src="img/img-peulh/portfolio-6.jpg" alt="">
+                            <img class="img-fluid w-100" src="img/img-peulh/portfolio/site de pâturage.jpeg" alt="">
                         </div>
                         <div class="portfolio-text bg-primary">
-                            <h4 class="font-weight-bold mb-4">Nom du projet</h4>
+                            <h4 class="font-weight-bold mb-4">Pâturage</h4>
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-sm btn-secondary m-1" href="">
                                     <i class="fa fa-link"></i>

@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    $element_active = "blog";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

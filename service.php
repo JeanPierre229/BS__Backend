@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    $element_active = "service";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,8 +28,60 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-</head>
 
+    <!-- Materials icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<style>
+    #hidepopup{
+        display: none;
+    }
+    .hidepopup{
+        display: none;
+    }
+    .bg-gray {
+        background-color: #e6e6e6;
+    }
+    /* Pop-up overlay with blur effect */
+    .pop-up-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        backdrop-filter: blur(10px); /* Floute l'arrière-plan */
+    }
+    /* Style de la carte avec ombre et mise en avant */
+    .pop-up-content .card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Ombre douce autour de la carte */
+        z-index: 1001;
+        width: 700px;
+        text-align: center;
+        position: relative;
+    }
+    .pop-up-content h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #28a745; /* Texte vert pour le titre */
+    }
+    .bg-gradient-primary{
+        background-image: linear-gradient(310deg, #ffc107 0%, #28a745 100%);
+    }
+    .btn-default{
+        background-color: #ffc107;
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+</style>
 <body>
     <!-- Header Start -->
     <?php require "header.php"; ?>
@@ -60,51 +116,53 @@
                     <h6 class="text-secondary font-weight-semi-bold text-uppercase mb-3">Nos Services</h6>
                     <h1 class="mb-4 section-title">Nos Services</h1>
                     <p>Accédez à un répertoire complet des principaux marchés de bétail de la région. Consultez les horaires, les tarifs et les animaux disponibles.</p>
-                    <a href="" class="btn btn-primary mt-3 py-2 px-4">Plus de Services</a>
                 </div>
                 <div class="col-lg-6 pt-5 pt-lg-0">
                     <div class="owl-carousel service-carousel position-relative">
                         <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
-                                <i class="fa fa-2x fa-hotel"></i>
-                            </div>
-                            <h5 class="font-weight-bold mb-4 px-4">Marchés de bétails</h5>
+                            <a href="#">
+                                <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
+                                    <i class="fa fa-2x fa-search"></i>
+                                </div>
+                            </a>
+                            <h5 class="font-weight-bold mb-4 px-4">Animalier</h5>
                             <img src="img/img-peulh/portfolio-1.jpg" alt="">
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
-                                <i class="fa fa-2x fa-map-marker-alt"></i>
-                            </div>
-                            <h5 class="font-weight-bold mb-4 px-4">Géolocalisation</h5>
+                            <a href="#" onclick="showPopUp()">
+                                <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
+                                    <i class="fa fa-2x fa-store"></i>
+                                </div>
+                            </a>
+                            <h5 class="font-weight-bold mb-4 px-4">Marché de bétails</h5>
                             <img src="img/img-peulh/portfolio-2.jpg" alt="">
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
-                                <i class="fa fa-2x fa-search"></i>
-                            </div>
-                            <h5 class="font-weight-bold mb-4 px-4">Recherche d'animaliers</h5>
+                            <a href="#">
+                                <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
+                                    <i class="fa fa-2x fa-map-marker-alt"></i>
+                                </div>
+                            </a>
+                            <h5 class="font-weight-bold mb-4 px-4">Géolocalisation</h5>
                             <img src="img/img-peulh/portfolio-3.jpg" alt="">
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
-                                <i class="fa fa-2x fa-link"></i>
-                            </div>
-                            <h5 class="font-weight-bold mb-4 px-4">Achat de produits</h5>
+                            <a href="#">
+                                <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
+                                    <i class="fa fa-2x fa-money-bill-alt"></i>
+                                </div>
+                            </a>
+                            <h5 class="font-weight-bold mb-4 px-4">Achat des produits</h5>
                             <img src="img/img-peulh/portfolio-4.jpg" alt="">
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
-                                <i class="fa fa-2x fa-spa"></i>
-                            </div>
-                            <h5 class="font-weight-bold mb-4 px-4">Démarrage de votre élevage</h5>
+                            <a href="#">
+                                <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
+                                    <i class="fa fa-2x fa-user-friends"></i>
+                                </div>
+                            </a>
+                            <h5 class="font-weight-bold mb-4 px-4">Cheptel</h5>
                             <img src="img/img-peulh/portfolio-5.jpg" alt="">
-                        </div>
-                        <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
-                                <i class="fa fa-2x fa-angle-double-up"></i>
-                            </div>
-                            <h5 class="font-weight-bold mb-4 px-4">Rejoignez notre communauté</h5>
-                            <img src="img/img-peulh/portfolio-6.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -112,6 +170,82 @@
         </div>
     </div>
     <!-- Services End -->
+
+    <!-- Pop Up Start Party -->
+    <section id="hidepopup">
+        <div class="pop-up-overlay">
+            <div class="pop-up-content">
+            <div class="card">
+                <div class="card-header">
+                <h5 class="card-title mb-0 text-center mb-3">Formulaire de demande de service</h5>
+                <form action="#" method="post" class="text-left">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="region" class="form-label">Votre région:</label>
+                            <select class="form-control" id="region" name="region" required>
+                                <option value="Atacora">Atacora (coming soon)</option>
+                                <option value="Alibori">Alibori (coming soon)</option>
+                                <option value="Borgou">Borgou</option>
+                                <option value="Donga">Donga (coming soon)</option>
+                                <option value="Couffo">Couffo (coming soon)</option>
+                                <option value="Collines">Collines (coming soon)</option>
+                                <option value="Zou">Zou (coming soon)</option>
+                                <option value="Plateau">Plateau (coming soon)</option>
+                                <option value="Littoral">Littoral (coming soon)</option>
+                                <option value="Oueme">Oueme (coming soon)</option>
+                                <option value="Mono">Mono (coming soon)</option>
+                                <option value="Atlantique">Atlantique (coming soon)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <label for="ethnie" class="form-label">L'ethnie du/des peulh(s):</label>
+                            <input type="text" class="form-control" id="ethnie" name="ethnie" placeholder="Ethnie du/des peulh(s)..." required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="sexe" class="form-label">Sexe du/des peulh(s):</label>
+                            <select class="form-control" id="sexe" name="sexe" required>
+                                <option value="Homme">Homme</option>
+                                <option value="Femme">Femme</option>
+                                <option value="Les Deux Sexes">Les Deux Sexes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <label for="budget" class="form-label">Budget à alouer:</label>
+                            <input type="number" min="50000" step="10000" class="form-control" id="budget" name="budget" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombrePeulh" class="form-label">Nombre de Peulh(s):</label>
+                        <input type="number" min="1" class="form-control" id="nombrePeulh" name="nombrePeulh" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="horaire" class="form-label">Horaire de Travail:</label>
+                        <select class="form-control" id="horaire" name="horaire" required>
+                            <option value="Matin(8h-12h)">Matin(8h-12h)</option>
+                            <option value="Soir(15h-19h)">Soir(15h-19h)</option>
+                            <option value="Plein Temps">Plein Temps</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <div class="row">
+                            <div class="col mt-3">
+                                <button class="btn btn-success px-5">Demander</button>
+                            </div>
+                            <div class="col mt-3 text-right">
+                                <a href="service.php" class="btn btn-default px-5">Annuler</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pop Up End Party -->
 
 
     <!-- Contact Info Start -->
@@ -159,7 +293,7 @@
                     <div class="owl-carousel testimonial-carousel position-relative">
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid" src="img/img-peulh/testimonial-1.jpg" alt="">
+                                <img class="img-fluid" src="img/img-peulh/Man_Silhouette.png" alt="">
                                 <div class="ml-3">
                                     <h5>Jean</h5>
                                     <i>Eleveur Bovin</i>
@@ -169,7 +303,7 @@
                         </div>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid" src="img/img-peulh/testimonial-2.jpg" alt="">
+                                <img class="img-fluid" src="img/img-peulh/Man_Silhouette.png" alt="">
                                 <div class="ml-3">
                                     <h5>Marie</h5>
                                     <i>Eleveuse laitière</i>
@@ -179,7 +313,7 @@
                         </div>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid" src="img/img-peulh/testimonial-1.jpg" alt="">
+                                <img class="img-fluid" src="img/img-peulh/Man_Silhouette.png" alt="">
                                 <div class="ml-3">
                                     <h5>Abdoul</h5>
                                     <i>Eleveur traditionnel</i>
@@ -225,6 +359,12 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        function showPopUp(){
+            document.getElementById('hidepopup').style.display = "flex";
+        }
+    </script>
 </body>
 
 </html>

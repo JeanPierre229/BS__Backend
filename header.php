@@ -46,10 +46,10 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="index.php" class="nav-item nav-link active">Accueil</a>
-                        <a href="about.php" class="nav-item nav-link">A Propos</a>
+                        <a href="index.php" class="nav-item nav-link <?php if($element_active == "index"): ?>active<?php endif; ?>">Accueil</a>
+                        <a href="about.php" class="nav-item nav-link <?php if($element_active == "about"): ?>active<?php endif; ?>">A Propos</a>
                         <div class="nav-item dropdown">
-                            <a href="service.php" class="nav-link dropdown-toggle" data-toggle="dropdown">Solution</a>
+                            <a href="service.php" class="nav-link <?php if($element_active == "service"): ?>active<?php endif; ?> dropdown-toggle" data-toggle="dropdown">Solution</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="service.php" class="dropdown-item">Trouver un animalier</a>
                                 <a href="service.php" class="dropdown-item">Marchés de bétail</a>
@@ -58,13 +58,23 @@
                                 <a href="service.php" class="dropdown-item">Gestion de votre cheptel</a>
                             </div>
                         </div>
-                        <a href="tarifs.php" class="nav-item nav-link">Tarifs</a>
-                        <a href="blog.php" class="nav-item nav-link">Blog</a>
-                        <a href="contact.php" class="nav-item nav-link">Contact</a>
+                        <a href="tarifs.php" class="nav-item nav-link <?php if($element_active == "tarifs"): ?>active<?php endif; ?>">Tarifs</a>
+                        <a href="blog.php" class="nav-item nav-link <?php if($element_active == "blog"): ?>active<?php endif; ?>">Blog</a>
+                        <a href="contact.php" class="nav-item nav-link <?php if($element_active == "contact"): ?>active<?php endif; ?>">Contact</a>
                     </div>
-                    <a href="inscription.php" class="btn btn-primary mr-3 d-none d-lg-block">Commencer</a>
-                    <a href="connexion.php" class="btn btn-outline-secondary mr-3 d-none d-lg-block">Connexion</a>
-                    <a href="dashboardUser/pages/dashboard.php" class="btn btn-outline-secondary mr-3 d-none d-lg-block">Dashboard</a>
+                    <?php if(empty($_SESSION)){ ?>
+                        <a href="inscription.php" class="btn btn-primary mr-3 d-none d-lg-block">Commencer</a>
+                        <a href="connexion.php" class="btn btn-outline-secondary mr-3 d-none d-lg-block">Connexion</a>
+                    <?php }else{ ?>
+                        <div class="dropdown mx-5 px-5">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"><i class="material-icons text-success">person_outlined</i></a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="dashboardUser/pages/dashboard.php" class="dropdown-item">Dashboard</a>
+                                <a href="dashboardUser/pages/profile.php" class="dropdown-item">Profile</a>
+                                <a href="deconnexion.php" class="dropdown-item">Deconnexion</a>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
             </nav>
         </div>

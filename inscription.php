@@ -75,9 +75,9 @@
                     <div class="mb-3">
                         <label for="categories" class="form-label h5">Catégories: </label>
                         <select name="categories" id="categories" class="form-control">
-                            <option <?php if(isset($_SESSION['categories']) && $_SESSION['categories'] == "Eleveurs"){ ?> selected="selected"<?php unset($_SESSION['categories']); } ?> value="Eleveurs">Eleveurs</option>
-                            <option <?php if(isset($_SESSION['categories']) && $_SESSION['categories'] == "Particuliers"){ ?> selected="selected"<?php unset($_SESSION['categories']); } ?> value="Particuliers">Particuliers</option>
-                            <option <?php if(isset($_SESSION['categories']) && $_SESSION['categories'] == "Consommateurs"){ ?> selected="selected"<?php unset($_SESSION['categories']); } ?> value="Consommateurs">Consommateurs</option>
+                            <option <?php if(isset($_SESSION['categories']) && $_SESSION['categories'] == "Eleveurs"){ ?> selected="selected"<?php unset($_SESSION['categories']); } ?> value="Eleveurs">Fermiers</option>
+                            <option <?php if(isset($_SESSION['categories']) && $_SESSION['categories'] == "Particuliers"){ ?> selected="selected"<?php unset($_SESSION['categories']); } ?> value="Particuliers">Consommateurs</option>
+                            <option <?php if(isset($_SESSION['categories']) && $_SESSION['categories'] == "Consommateurs"){ ?> selected="selected"<?php unset($_SESSION['categories']); } ?> value="Consommateurs">Vendeurs</option>
                         </select>
                     </div>
                     <div class="mb-3">

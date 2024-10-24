@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    $element_active = "about";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
