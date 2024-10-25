@@ -120,7 +120,7 @@
                 <div class="col-lg-6 pt-5 pt-lg-0">
                     <div class="owl-carousel service-carousel position-relative">
                         <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <a href="#">
+                            <a href="#" onclick="showPopUp()">
                                 <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
                                     <i class="fa fa-2x fa-search"></i>
                                 </div>
@@ -138,7 +138,7 @@
                             <img src="img/img-peulh/portfolio-2.jpg" alt="">
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <a href="#">
+                            <a href="#" onclick="showPopUp()">
                                 <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
                                     <i class="fa fa-2x fa-map-marker-alt"></i>
                                 </div>
@@ -147,7 +147,7 @@
                             <img src="img/img-peulh/portfolio-3.jpg" alt="">
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <a href="#">
+                            <a href="#" onclick="showPopUp()">
                                 <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
                                     <i class="fa fa-2x fa-money-bill-alt"></i>
                                 </div>
@@ -156,7 +156,7 @@
                             <img src="img/img-peulh/portfolio-4.jpg" alt="">
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-light rounded overflow-hidden pt-4">
-                            <a href="#">
+                            <a href="#" onclick="showPopUp()">
                                 <div class="icon-box bg-light text-secondary shadow mt-2 mb-4">
                                     <i class="fa fa-2x fa-user-friends"></i>
                                 </div>

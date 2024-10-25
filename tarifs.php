@@ -89,13 +89,13 @@
     <!-- Tarifs Start -->
     <div class="row mx-5">
         <div class="col mx-auto text-center bg-green border-bottom-orange cursor rounded-start p-3" id="televeurs" onclick="showSection_t('Televeurs')"> 
-            Eleveurs
+            Fermiers
         </div>
         <div class="col mx-auto text-center bg-gray border-bottom-orange cursor p-3"  id="tparticuliers"  onclick="showSection_t('Tparticuliers')">
-            Particuliers
+            Consommateurs
         </div>
         <div class="col mx-auto text-center bg-gray border-bottom-orange cursor p-3 rounded-end" id="tconsommateurs" onclick="showSection_t('Tconsommateurs')"> 
-            Consommateurs
+            Vendeurs
         </div>
     </div>
     <section class="my-4 hideTeleveurs mx-5">
